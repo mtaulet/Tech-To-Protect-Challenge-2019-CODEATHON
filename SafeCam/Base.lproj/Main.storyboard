@@ -322,11 +322,83 @@
                         <outlet property="toggleCameraButton" destination="dNR-Vo-zfA" id="X9B-cw-zN3"/>
                         <outlet property="toggleFlashButton" destination="TK7-Oc-3y1" id="fu3-Xo-mtW"/>
                         <outlet property="videoModeButton" destination="4wa-M1-7a8" id="ITt-be-W48"/>
+                        <segue destination="pcn-0a-PLI" kind="presentation" identifier="info" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="dUL-lm-d0p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I43-px-AHN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2186" y="-105"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="omI-bX-pXX">
+            <objects>
+                <viewController id="pcn-0a-PLI" customClass="InfoViewController" customModule="SafeCam" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kzi-5d-hye">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="HCw-vf-mJh">
+                                <rect key="frame" x="87" y="88" width="240" height="560"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sWa-ge-XHb">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S3s-JJ-BiK">
+                                        <rect key="frame" x="87.333333333333343" y="153" width="65.333333333333343" height="407"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9n-oA-0J4">
+                                                <rect key="frame" x="0.0" y="0.0" width="65.333333333333329" height="316"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCb-am-lFl">
+                                                <rect key="frame" x="0.0" y="326" width="65.333333333333329" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hX-vg-nvO">
+                                                <rect key="frame" x="0.0" y="356.33333333333337" width="65.333333333333329" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCf-9s-jZh">
+                                                <rect key="frame" x="0.0" y="386.66666666666663" width="65.333333333333329" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sWa-ge-XHb" firstAttribute="leading" secondItem="HCw-vf-mJh" secondAttribute="leadingMargin" id="7L9-6E-1sj"/>
+                                    <constraint firstItem="S3s-JJ-BiK" firstAttribute="leading" secondItem="HCw-vf-mJh" secondAttribute="leading" constant="87.333333333333343" id="KDa-2Y-3C0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HCw-vf-mJh" firstAttribute="top" secondItem="WnX-VU-DiW" secondAttribute="top" constant="88" id="4kx-0T-rJb"/>
+                            <constraint firstItem="HCw-vf-mJh" firstAttribute="leading" secondItem="WnX-VU-DiW" secondAttribute="leading" constant="87" id="6kq-gk-uS8"/>
+                            <constraint firstItem="HCw-vf-mJh" firstAttribute="centerX" secondItem="kzi-5d-hye" secondAttribute="centerX" id="87T-pb-jT9"/>
+                            <constraint firstItem="HCw-vf-mJh" firstAttribute="centerY" secondItem="kzi-5d-hye" secondAttribute="centerY" id="JAb-nf-gBq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WnX-VU-DiW"/>
+                    </view>
+                    <connections>
+                        <outlet property="Date" destination="fCb-am-lFl" id="BFQ-TG-8Zg"/>
+                        <outlet property="Device" destination="YCf-9s-jZh" id="Fzn-7s-vT0"/>
+                        <outlet property="Location" destination="3hX-vg-nvO" id="7Z3-sN-BkI"/>
+                        <outlet property="Photo" destination="sWa-ge-XHb" id="Gxj-vV-XgA"/>
+                        <outlet property="Titlename" destination="K9n-oA-0J4" id="WQe-bv-BGT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9F6-sf-X3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3385.507246376812" y="-105.16304347826087"/>
         </scene>
     </scenes>
     <resources>

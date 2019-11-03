@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import Photos
-import ScanbotSDK
+
 
 class CameraViewController: UIViewController {
     
@@ -29,6 +29,12 @@ class CameraViewController: UIViewController {
     let cameraController = CameraController()
     
     override var prefersStatusBarHidden: Bool { return true }
+    
+    var titlename = ""
+    var location = ""
+    var date = ""
+    var device = ""
+    var image : UIImage = UIImage()
 
 
 }
@@ -103,13 +109,29 @@ extension CameraViewController {
             try? PHPhotoLibrary.shared().performChangesAndWait {
                 PHAssetChangeRequest.creationRequestForAsset(from: image)
             }
+            // Get title
+            self.titlename = "hello"
             
+            //Get image
+            self.image = image
             
-            //let data = image.jpegData(compressionQuality: 1)
-            //SBSDKImageMetadataProcessor.extractMetadataFromImageData(data)
-            //let insideData = data(1)
+            // Get date
+            let now = Date()
+            let formatter = DateFormatter()
+            formatter.timeZone = TimeZone.current
+            formatter.dateFormat = "yyyy-MM-dd HH:mm"
+            self.date = formatter.string(from: now)
+            
+            //Change view
+            self.performSegue(withIdentifier: "info", sender: self)
             
         }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! InfoViewController
+        vc.titlename = self.titlename
+        vc.date = self.date
+        vc.image = self.image
     }
     
 }
