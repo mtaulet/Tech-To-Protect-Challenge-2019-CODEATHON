@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641B3EBEB44FFC7840A16A58 /* Pods_SafeCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6DF3CA914D1D00FEBC930F1 /* Pods_SafeCam.framework */; };
 		708BE26D236E5EBF000F5FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE26C236E5EBF000F5FC6 /* AppDelegate.swift */; };
 		708BE26F236E5EBF000F5FC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE26E236E5EBF000F5FC6 /* SceneDelegate.swift */; };
-		708BE271236E5EBF000F5FC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE270236E5EBF000F5FC6 /* ViewController.swift */; };
+		708BE271236E5EBF000F5FC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE270236E5EBF000F5FC6 /* LoginViewController.swift */; };
 		708BE274236E5EBF000F5FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708BE272236E5EBF000F5FC6 /* Main.storyboard */; };
 		708BE276236E5EC1000F5FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 708BE275236E5EC1000F5FC6 /* Assets.xcassets */; };
 		708BE279236E5EC1000F5FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708BE277236E5EC1000F5FC6 /* LaunchScreen.storyboard */; };
+		708BE281236E63C0000F5FC6 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE280236E63C0000F5FC6 /* CameraController.swift */; };
+		708BE283236E9BA8000F5FC6 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE282236E9BA8000F5FC6 /* DesignableView.swift */; };
+		708BE285236EAE7E000F5FC6 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE284236EAE7E000F5FC6 /* OptionViewController.swift */; };
+		708BE287236EBA4A000F5FC6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE286236EBA4A000F5FC6 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33AF6ADB1498B4D6FC73F243 /* Pods-SafeCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeCam.debug.xcconfig"; path = "Target Support Files/Pods-SafeCam/Pods-SafeCam.debug.xcconfig"; sourceTree = "<group>"; };
 		708BE269236E5EBF000F5FC6 /* SafeCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		708BE26C236E5EBF000F5FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		708BE26E236E5EBF000F5FC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		708BE270236E5EBF000F5FC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		708BE270236E5EBF000F5FC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		708BE273236E5EBF000F5FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		708BE275236E5EC1000F5FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		708BE278236E5EC1000F5FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		708BE27A236E5EC1000F5FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		708BE280236E63C0000F5FC6 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		708BE282236E9BA8000F5FC6 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		708BE284236EAE7E000F5FC6 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		708BE286236EBA4A000F5FC6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		CCBA1FE92CA56B101058FB10 /* Pods-SafeCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeCam.release.xcconfig"; path = "Target Support Files/Pods-SafeCam/Pods-SafeCam.release.xcconfig"; sourceTree = "<group>"; };
+		E6DF3CA914D1D00FEBC930F1 /* Pods_SafeCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641B3EBEB44FFC7840A16A58 /* Pods_SafeCam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		502BC3C2884C97F8CFFB1732 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6DF3CA914D1D00FEBC930F1 /* Pods_SafeCam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BD3FC35BAE6A82C7ABE2B4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33AF6ADB1498B4D6FC73F243 /* Pods-SafeCam.debug.xcconfig */,
+				CCBA1FE92CA56B101058FB10 /* Pods-SafeCam.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		708BE260236E5EBF000F5FC6 = {
 			isa = PBXGroup;
 			children = (
 				708BE26B236E5EBF000F5FC6 /* SafeCam */,
 				708BE26A236E5EBF000F5FC6 /* Products */,
+				5BD3FC35BAE6A82C7ABE2B4F /* Pods */,
+				502BC3C2884C97F8CFFB1732 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +91,15 @@
 			children = (
 				708BE26C236E5EBF000F5FC6 /* AppDelegate.swift */,
 				708BE26E236E5EBF000F5FC6 /* SceneDelegate.swift */,
-				708BE270236E5EBF000F5FC6 /* ViewController.swift */,
+				708BE270236E5EBF000F5FC6 /* LoginViewController.swift */,
 				708BE272236E5EBF000F5FC6 /* Main.storyboard */,
 				708BE275236E5EC1000F5FC6 /* Assets.xcassets */,
 				708BE277236E5EC1000F5FC6 /* LaunchScreen.storyboard */,
 				708BE27A236E5EC1000F5FC6 /* Info.plist */,
+				708BE280236E63C0000F5FC6 /* CameraController.swift */,
+				708BE282236E9BA8000F5FC6 /* DesignableView.swift */,
+				708BE284236EAE7E000F5FC6 /* OptionViewController.swift */,
+				708BE286236EBA4A000F5FC6 /* CameraViewController.swift */,
 			);
 			path = SafeCam;
 			sourceTree = "<group>";
@@ -74,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 708BE27D236E5EC1000F5FC6 /* Build configuration list for PBXNativeTarget "SafeCam" */;
 			buildPhases = (
+				A38FB691A6D2B0B80C8DC54A /* [CP] Check Pods Manifest.lock */,
 				708BE265236E5EBF000F5FC6 /* Sources */,
 				708BE266236E5EBF000F5FC6 /* Frameworks */,
 				708BE267236E5EBF000F5FC6 /* Resources */,
+				ACF0EFCA2EAC280B2A09CF64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +172,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A38FB691A6D2B0B80C8DC54A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SafeCam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACF0EFCA2EAC280B2A09CF64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafeCam/Pods-SafeCam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafeCam/Pods-SafeCam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SafeCam/Pods-SafeCam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		708BE265236E5EBF000F5FC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				708BE271236E5EBF000F5FC6 /* ViewController.swift in Sources */,
+				708BE271236E5EBF000F5FC6 /* LoginViewController.swift in Sources */,
 				708BE26D236E5EBF000F5FC6 /* AppDelegate.swift in Sources */,
+				708BE281236E63C0000F5FC6 /* CameraController.swift in Sources */,
+				708BE283236E9BA8000F5FC6 /* DesignableView.swift in Sources */,
+				708BE287236EBA4A000F5FC6 /* CameraViewController.swift in Sources */,
 				708BE26F236E5EBF000F5FC6 /* SceneDelegate.swift in Sources */,
+				708BE285236EAE7E000F5FC6 /* OptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +367,7 @@
 		};
 		708BE27E236E5EC1000F5FC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33AF6ADB1498B4D6FC73F243 /* Pods-SafeCam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +380,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jesusaguas.SafeCam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		708BE27F236E5EC1000F5FC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCBA1FE92CA56B101058FB10 /* Pods-SafeCam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jesusaguas.SafeCam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

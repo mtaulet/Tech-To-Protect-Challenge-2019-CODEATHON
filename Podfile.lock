@@ -1,0 +1,18 @@
+PODS:
+  - ScanbotSDK (1.9.7):
+    - ScanbotSDK/NONE (= 1.9.7)
+  - ScanbotSDK/NONE (1.9.7)
+
+DEPENDENCIES:
+  - ScanbotSDK
+
+SPEC REPOS:
+  trunk:
+    - ScanbotSDK
+
+SPEC CHECKSUMS:
+  ScanbotSDK: eb3aee257c4f1b38cb8e06ece6cc856774c28605
+
+PODFILE CHECKSUM: c7bde77006e1c3fa198cd6fca5853c4e66c8bbe0
+
+COCOAPODS: 1.8.4
