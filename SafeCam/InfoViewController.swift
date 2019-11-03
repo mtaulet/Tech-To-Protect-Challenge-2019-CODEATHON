@@ -13,19 +13,17 @@ import func CommonCrypto.CC_MD5
 import typealias CommonCrypto.CC_LONG
 import MapKit
 import CoreLocation
-
+import FirebaseDatabase
 
 
 class InfoViewController: UIViewController, CLLocationManagerDelegate {
     
     
-    
-    @IBOutlet weak var Titlename: UILabel!
-    
     @IBOutlet weak var Photo: UIImageView!
     
     @IBOutlet weak var Date: UILabel!
     
+    @IBOutlet weak var Coordinates: UILabel!
     
     @IBOutlet weak var Location: UILabel!
     
@@ -33,11 +31,10 @@ class InfoViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     let location = CLLocationManager()
-    var titlename = ""
     var date = ""
-    var device = ""
     var image = UIImage()
     
+    var ref: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +50,8 @@ class InfoViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         Photo.image = image
-        Titlename.text = titlename
         Date.text = date
+        Device.text = UIDevice.current.name
         
         // Image to String
         let data = image.jpegData(compressionQuality: 1)
@@ -62,25 +59,28 @@ class InfoViewController: UIViewController, CLLocationManagerDelegate {
         let MD5data = MD5(string: imageStr)
         let hash = (MD5data.base64EncodedString())
         print(hash)
+        
+        ref = Database.database().reference()
+        self.writeDB(hash: hash)
+    }
+    
+    func writeDB (hash: String) {
+        self.ref.child(hash).setValue(hash)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        self.Coordinates.text = "\(locValue.latitude) \(locValue.longitude)"
         print("locations = \(locValue.latitude) \(locValue.longitude)")
-        
-        
-        
+    
         guard let location: CLLocation = manager.location else { return }
         fetchCityAndCountry(from: location) { city, country, error in
             guard let city = city, let country = country, error == nil else { return }
-            print(city + ", " + country)
+            self.Location.text = city + ", " + country
         }
-            
-            
-            
-            
         locationManager.stopUpdatingLocation()
     }
+    
     func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
         CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
             completion(placemarks?.first?.locality,

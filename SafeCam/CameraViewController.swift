@@ -109,8 +109,6 @@ extension CameraViewController {
             try? PHPhotoLibrary.shared().performChangesAndWait {
                 PHAssetChangeRequest.creationRequestForAsset(from: image)
             }
-            // Get title
-            self.titlename = "hello"
             
             //Get image
             self.image = image
@@ -129,7 +127,6 @@ extension CameraViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! InfoViewController
-        vc.titlename = self.titlename
         vc.date = self.date
         vc.image = self.image
     }
