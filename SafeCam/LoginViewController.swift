@@ -10,6 +10,8 @@ import UIKit
 
 // Put this piece of code anywhere you like
 extension UIViewController {
+    
+    // Hide keyboard when tapping out
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
@@ -19,7 +21,9 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
 }
+
 
 class LoginViewController: UIViewController {
 
