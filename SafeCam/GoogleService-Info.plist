@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:298053253224:ios:cdb3d340ec3f3feafba3dd</string>
+	<string></string>
 	<key>DATABASE_URL</key>
 	<string>https://tech-to-protect-hackathon.firebaseio.com</string>
 </dict>
