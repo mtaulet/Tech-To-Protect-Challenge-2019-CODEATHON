@@ -57,7 +57,8 @@ class InfoViewController: UIViewController, CLLocationManagerDelegate {
         let data = image.jpegData(compressionQuality: 1)
         let imageStr = (data?.base64EncodedString())!
         let MD5data = MD5(string: imageStr)
-        let hash = (MD5data.base64EncodedString())
+        var hash = (MD5data.base64EncodedString())
+        hash = hash.replacingOccurrences(of: "/", with: "j")
         print(hash)
         
         ref = Database.database().reference()
@@ -71,7 +72,6 @@ class InfoViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         self.Coordinates.text = "\(locValue.latitude) \(locValue.longitude)"
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
     
         guard let location: CLLocation = manager.location else { return }
         fetchCityAndCountry(from: location) { city, country, error in

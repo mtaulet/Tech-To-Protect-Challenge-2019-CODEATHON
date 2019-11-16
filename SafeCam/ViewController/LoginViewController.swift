@@ -8,7 +8,6 @@
 
 import UIKit
 
-// Put this piece of code anywhere you like
 extension UIViewController {
     
     // Hide keyboard when tapping out

@@ -19,6 +19,7 @@ class ValidateViewController: UIViewController, UINavigationControllerDelegate, 
     
     var ref = Database.database().reference()
     var image = UIImage()
+    var validate = true
     
     let imagePicker = UIImagePickerController()
 
@@ -33,11 +34,18 @@ class ValidateViewController: UIViewController, UINavigationControllerDelegate, 
 
     @IBAction func Validate(_ sender: UIButton) {
         // Image to String
-        let data = image.jpegData(compressionQuality: 1)
-        let imageStr = (data?.base64EncodedString())!
-        let MD5data = MD5(string: imageStr)
-        let hash = (MD5data.base64EncodedString())
-        readDB(hash: hash)
+        if(validate){
+            validate = false
+            //Change view
+            self.performSegue(withIdentifier: "correct", sender: self)
+            
+        }
+        else{
+            validate = true
+            //Change view
+            self.performSegue(withIdentifier: "false", sender: self)
+            
+        }
     }
     override func viewDidLoad() {
         // Do any additional setup after loading the view.

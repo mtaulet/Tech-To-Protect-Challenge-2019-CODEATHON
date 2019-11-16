@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4303E9F21538E50C75FE1604 /* Pods_SafeCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6DF3CA914D1D00FEBC930F1 /* Pods_SafeCam.framework */; };
 		7041475E236F2BEA00ED74EB /* ValidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7041475D236F2BEA00ED74EB /* ValidateViewController.swift */; };
+		70414760236F98C100ED74EB /* CorrectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7041475F236F98C100ED74EB /* CorrectViewController.swift */; };
+		70414762236F98D500ED74EB /* FalseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70414761236F98D500ED74EB /* FalseViewController.swift */; };
 		708BE26D236E5EBF000F5FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE26C236E5EBF000F5FC6 /* AppDelegate.swift */; };
 		708BE26F236E5EBF000F5FC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE26E236E5EBF000F5FC6 /* SceneDelegate.swift */; };
 		708BE271236E5EBF000F5FC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE270236E5EBF000F5FC6 /* LoginViewController.swift */; };
@@ -21,11 +23,14 @@
 		708BE287236EBA4A000F5FC6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BE286236EBA4A000F5FC6 /* CameraViewController.swift */; };
 		709D9903236EF7B800543891 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D9902236EF7B800543891 /* InfoViewController.swift */; };
 		709D9906236F1CAA00543891 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709D9905236F1CAA00543891 /* GoogleService-Info.plist */; };
+		70D94AF4237F86C400BC511F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D94AF3237F86C400BC511F /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33AF6ADB1498B4D6FC73F243 /* Pods-SafeCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeCam.debug.xcconfig"; path = "Target Support Files/Pods-SafeCam/Pods-SafeCam.debug.xcconfig"; sourceTree = "<group>"; };
 		7041475D236F2BEA00ED74EB /* ValidateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateViewController.swift; sourceTree = "<group>"; };
+		7041475F236F98C100ED74EB /* CorrectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectViewController.swift; sourceTree = "<group>"; };
+		70414761236F98D500ED74EB /* FalseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalseViewController.swift; sourceTree = "<group>"; };
 		708BE269236E5EBF000F5FC6 /* SafeCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		708BE26C236E5EBF000F5FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		708BE26E236E5EBF000F5FC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +45,7 @@
 		708BE286236EBA4A000F5FC6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		709D9902236EF7B800543891 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		709D9905236F1CAA00543891 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70D94AF3237F86C400BC511F /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CCBA1FE92CA56B101058FB10 /* Pods-SafeCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeCam.release.xcconfig"; path = "Target Support Files/Pods-SafeCam/Pods-SafeCam.release.xcconfig"; sourceTree = "<group>"; };
 		E6DF3CA914D1D00FEBC930F1 /* Pods_SafeCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,12 +102,8 @@
 			children = (
 				708BE26C236E5EBF000F5FC6 /* AppDelegate.swift */,
 				708BE26E236E5EBF000F5FC6 /* SceneDelegate.swift */,
-				708BE270236E5EBF000F5FC6 /* LoginViewController.swift */,
-				708BE284236EAE7E000F5FC6 /* OptionViewController.swift */,
-				7041475D236F2BEA00ED74EB /* ValidateViewController.swift */,
-				708BE286236EBA4A000F5FC6 /* CameraViewController.swift */,
+				70D94AF5237F8B9E00BC511F /* ViewController */,
 				709D9905236F1CAA00543891 /* GoogleService-Info.plist */,
-				709D9902236EF7B800543891 /* InfoViewController.swift */,
 				708BE272236E5EBF000F5FC6 /* Main.storyboard */,
 				708BE275236E5EC1000F5FC6 /* Assets.xcassets */,
 				708BE277236E5EC1000F5FC6 /* LaunchScreen.storyboard */,
@@ -110,6 +112,21 @@
 				708BE282236E9BA8000F5FC6 /* DesignableView.swift */,
 			);
 			path = SafeCam;
+			sourceTree = "<group>";
+		};
+		70D94AF5237F8B9E00BC511F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				709D9902236EF7B800543891 /* InfoViewController.swift */,
+				7041475D236F2BEA00ED74EB /* ValidateViewController.swift */,
+				708BE286236EBA4A000F5FC6 /* CameraViewController.swift */,
+				7041475F236F98C100ED74EB /* CorrectViewController.swift */,
+				70414761236F98D500ED74EB /* FalseViewController.swift */,
+				708BE284236EAE7E000F5FC6 /* OptionViewController.swift */,
+				70D94AF3237F86C400BC511F /* SignupViewController.swift */,
+				708BE270236E5EBF000F5FC6 /* LoginViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +251,12 @@
 				708BE283236E9BA8000F5FC6 /* DesignableView.swift in Sources */,
 				7041475E236F2BEA00ED74EB /* ValidateViewController.swift in Sources */,
 				708BE287236EBA4A000F5FC6 /* CameraViewController.swift in Sources */,
+				70D94AF4237F86C400BC511F /* SignupViewController.swift in Sources */,
 				708BE26F236E5EBF000F5FC6 /* SceneDelegate.swift in Sources */,
 				709D9903236EF7B800543891 /* InfoViewController.swift in Sources */,
+				70414762236F98D500ED74EB /* FalseViewController.swift in Sources */,
 				708BE285236EAE7E000F5FC6 /* OptionViewController.swift in Sources */,
+				70414760236F98C100ED74EB /* CorrectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
