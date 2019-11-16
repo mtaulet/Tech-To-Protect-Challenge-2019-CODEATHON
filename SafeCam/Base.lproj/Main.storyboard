@@ -438,7 +438,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="kisspng-font-awesome-computer-icons-symbol-cross-eye-5ade2087697f36.1985684515245067594321">
+                                        <state key="normal" image="close">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -549,57 +549,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ell-78-hgo">
-                                <rect key="frame" x="33" y="40" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="arrow.left" catalog="system"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDe-VC-Z3s">
+                                <rect key="frame" x="10" y="10" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="B3G-0O-z8B"/>
+                                    <constraint firstAttribute="width" constant="40" id="JpF-ul-h50"/>
+                                </constraints>
+                                <state key="normal" image="close blue"/>
                                 <connections>
-                                    <segue destination="SUr-jF-ARE" kind="presentation" modalPresentationStyle="fullScreen" id="B2s-o1-Vox"/>
+                                    <segue destination="SUr-jF-ARE" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="sND-pN-8YN"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-kV-BZ7">
-                                <rect key="frame" x="10" y="10" width="394" height="716"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkm-Ab-88a">
-                                        <rect key="frame" x="113" y="0.0" width="168" height="345"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <state key="normal" title="Choose image"/>
-                                        <connections>
-                                            <action selector="loadImageButtonTapped:" destination="zcg-pJ-9xQ" eventType="touchUpInside" id="K8r-Hc-7CO"/>
-                                        </connections>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="E54-Kl-ftQ">
-                                        <rect key="frame" x="77" y="450" width="240" height="266"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="frZ-vz-0Ww">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="170"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERR-Jz-TXW">
-                                                <rect key="frame" x="0.0" y="209" width="240" height="57"/>
-                                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                                <state key="normal" title="Validate">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="Validate:" destination="zcg-pJ-9xQ" eventType="touchUpInside" id="bSr-3U-aTp"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkm-Ab-88a">
+                                <rect key="frame" x="123" y="100" width="168" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Choose image"/>
+                                <connections>
+                                    <action selector="loadImageButtonTapped:" destination="zcg-pJ-9xQ" eventType="touchUpInside" id="K8r-Hc-7CO"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="frZ-vz-0Ww">
+                                <rect key="frame" x="87" y="165" width="240" height="406"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERR-Jz-TXW">
+                                <rect key="frame" x="192" y="649" width="30" height="57"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Validate:" destination="zcg-pJ-9xQ" eventType="touchUpInside" id="bSr-3U-aTp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="bt0-Vh-4Zy" firstAttribute="trailing" secondItem="jJg-kV-BZ7" secondAttribute="trailing" constant="10" id="WHL-2c-DEt"/>
-                            <constraint firstItem="jJg-kV-BZ7" firstAttribute="leading" secondItem="bt0-Vh-4Zy" secondAttribute="leading" constant="10" id="ZkL-Cd-cEO"/>
-                            <constraint firstItem="bt0-Vh-4Zy" firstAttribute="bottom" secondItem="jJg-kV-BZ7" secondAttribute="bottom" constant="10" id="lc6-fr-2Xg"/>
-                            <constraint firstItem="jJg-kV-BZ7" firstAttribute="top" secondItem="bt0-Vh-4Zy" secondAttribute="top" constant="10" id="puv-xv-0AK"/>
+                            <constraint firstItem="tDe-VC-Z3s" firstAttribute="leading" secondItem="bt0-Vh-4Zy" secondAttribute="leading" constant="10" id="1iO-fX-Y8V"/>
+                            <constraint firstItem="frZ-vz-0Ww" firstAttribute="centerX" secondItem="ERR-Jz-TXW" secondAttribute="centerX" id="8es-Le-Xii"/>
+                            <constraint firstItem="frZ-vz-0Ww" firstAttribute="centerY" secondItem="8sf-vU-1Il" secondAttribute="centerY" id="Dzi-gm-F6E"/>
+                            <constraint firstItem="frZ-vz-0Ww" firstAttribute="centerX" secondItem="Bkm-Ab-88a" secondAttribute="centerX" id="Odf-EB-rZT"/>
+                            <constraint firstItem="bt0-Vh-4Zy" firstAttribute="bottom" secondItem="ERR-Jz-TXW" secondAttribute="bottom" constant="30" id="V3y-Un-hiS"/>
+                            <constraint firstItem="Bkm-Ab-88a" firstAttribute="top" secondItem="bt0-Vh-4Zy" secondAttribute="top" constant="100" id="kMX-cM-E39"/>
+                            <constraint firstItem="tDe-VC-Z3s" firstAttribute="top" secondItem="bt0-Vh-4Zy" secondAttribute="top" constant="10" id="n7N-rx-8HW"/>
+                            <constraint firstItem="frZ-vz-0Ww" firstAttribute="leading" secondItem="bt0-Vh-4Zy" secondAttribute="leading" constant="87" id="wb6-Gy-Im7"/>
+                            <constraint firstItem="frZ-vz-0Ww" firstAttribute="top" secondItem="Bkm-Ab-88a" secondAttribute="bottom" constant="20" id="xMu-kq-QFW"/>
+                            <constraint firstItem="frZ-vz-0Ww" firstAttribute="centerX" secondItem="8sf-vU-1Il" secondAttribute="centerX" id="z6C-y0-353"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bt0-Vh-4Zy"/>
                     </view>
                     <connections>
+                        <outlet property="ChooseButton" destination="Bkm-Ab-88a" id="6iP-kR-7tp"/>
+                        <outlet property="ValidateButton" destination="ERR-Jz-TXW" id="o7n-9T-1e5"/>
                         <outlet property="imageView" destination="frZ-vz-0Ww" id="7LW-xu-Rkv"/>
                         <segue destination="gsO-SA-yar" kind="presentation" identifier="correct" id="JNg-oD-o0H"/>
                         <segue destination="hHd-Pj-BAb" kind="presentation" identifier="false" id="R71-Ke-q3Z"/>
@@ -607,7 +607,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPa-2W-Coq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2185.507246376812" y="637.5"/>
+            <point key="canvasLocation" x="2185.507246376812" y="636.68478260869574"/>
         </scene>
         <!--False View Controller-->
         <scene sceneID="yOC-4y-d5D">
@@ -683,7 +683,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bk-FY-12H">
-                                <rect key="frame" x="172.66666666666666" y="543.33333333333337" width="69" height="41"/>
+                                <rect key="frame" x="172.66666666666666" y="645" width="69" height="41"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Return">
@@ -694,7 +694,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="uLl-YD-wu3">
-                                <rect key="frame" x="10" y="378" width="394" height="135.33333333333337"/>
+                                <rect key="frame" x="10" y="398" width="394" height="135.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCb-am-lFl">
                                         <rect key="frame" x="0.0" y="0.0" width="36" height="20.333333333333332"/>
@@ -731,8 +731,8 @@
                             <constraint firstItem="sWa-ge-XHb" firstAttribute="top" secondItem="WnX-VU-DiW" secondAttribute="top" constant="68" id="XSm-yL-kEB"/>
                             <constraint firstItem="sWa-ge-XHb" firstAttribute="centerX" secondItem="uLl-YD-wu3" secondAttribute="centerX" id="Z4C-5y-9Yw"/>
                             <constraint firstItem="uLl-YD-wu3" firstAttribute="leading" secondItem="WnX-VU-DiW" secondAttribute="leading" constant="10" id="dGA-aj-sIz"/>
-                            <constraint firstItem="8Bk-FY-12H" firstAttribute="top" secondItem="uLl-YD-wu3" secondAttribute="bottom" constant="30" id="ijM-bq-DjQ"/>
-                            <constraint firstItem="uLl-YD-wu3" firstAttribute="top" secondItem="sWa-ge-XHb" secondAttribute="bottom" constant="10" id="mmA-Ag-igi"/>
+                            <constraint firstItem="WnX-VU-DiW" firstAttribute="bottom" secondItem="8Bk-FY-12H" secondAttribute="bottom" constant="50" id="ecU-Jj-6ca"/>
+                            <constraint firstItem="uLl-YD-wu3" firstAttribute="top" secondItem="sWa-ge-XHb" secondAttribute="bottom" constant="30" id="ud2-85-Mcd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WnX-VU-DiW"/>
                     </view>
@@ -754,13 +754,13 @@
         <image name="Photo Camera Icon" width="24" height="24"/>
         <image name="Rear Camera Icon" width="24" height="24"/>
         <image name="Video Camera Icon" width="24" height="24"/>
-        <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="attention-sign-png--2400" width="800" height="800"/>
+        <image name="close" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="close blue" width="170.66667175292969" height="170.66667175292969"/>
         <image name="icon-76" width="76" height="76"/>
-        <image name="kisspng-font-awesome-computer-icons-symbol-cross-eye-5ade2087697f36.1985684515245067594321" width="170.66667175292969" height="170.66667175292969"/>
         <image name="tick-azul" width="213.33332824707031" height="172.66667175292969"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="70v-97-e4c"/>
+        <segue reference="8fV-qN-Oyz"/>
     </inferredMetricsTieBreakers>
 </document>

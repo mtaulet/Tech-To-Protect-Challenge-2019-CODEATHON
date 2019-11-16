@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Photos
+import AssetsLibrary
 
 
 class CameraViewController: UIViewController {
@@ -110,10 +111,41 @@ extension CameraViewController {
                 PHAssetChangeRequest.creationRequestForAsset(from: image)
             }
             
+            //---------------------------------------------------------------
+            
             //Get image
-            self.image = image
+            func fetchPhotos () {
+                // Sort the images by descending creation date and fetch the first 1
+                let fetchOptions = PHFetchOptions()
+                fetchOptions.sortDescriptors = [NSSortDescriptor(key:"creationDate", ascending: false)]
+                fetchOptions.fetchLimit = 1
+
+                // Fetch the image assets
+                let fetchResult: PHFetchResult = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: fetchOptions)
+                
+                // If the fetch result isn't empty,
+                // proceed with the image request
+                if fetchResult.count > 0 {
+                    let totalImageCountNeeded = 1 // <-- The number of images to fetch
+                    fetchPhotoAtIndex(0, totalImageCountNeeded, fetchResult)
+                }
+            }
+
+            func fetchPhotoAtIndex(_ index:Int, _ totalImageCountNeeded: Int, _ fetchResult: PHFetchResult<PHAsset>) {
+                let requestOptions = PHImageRequestOptions()
+                requestOptions.isSynchronous = true
+
+                PHImageManager.default().requestImage(for: fetchResult.object(at: index) as PHAsset, targetSize: self.view.frame.size, contentMode: PHImageContentMode.aspectFill, options: requestOptions, resultHandler: { (image, _) in
+                        if let image = image {
+                            // Add the returned image to your array
+                            self.image = image
+                        }
+                })
+            }
+
             
             // Get date
+            fetchPhotos()
             let now = Date()
             let formatter = DateFormatter()
             formatter.timeZone = TimeZone.current
@@ -126,9 +158,11 @@ extension CameraViewController {
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! InfoViewController
-        vc.date = self.date
-        vc.image = self.image
+        if(segue.identifier=="info"){
+            let vc = segue.destination as! InfoViewController
+            vc.date = self.date
+            vc.image = self.image
+        }
     }
     
 }

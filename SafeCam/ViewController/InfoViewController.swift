@@ -58,8 +58,7 @@ class InfoViewController: UIViewController, CLLocationManagerDelegate {
         let imageStr = (data?.base64EncodedString())!
         let MD5data = MD5(string: imageStr)
         var hash = (MD5data.base64EncodedString())
-        hash = hash.replacingOccurrences(of: "/", with: "j")
-        print(hash)
+        hash = hash.replacingOccurrences(of: "/", with: "x")
         
         ref = Database.database().reference()
         self.writeDB(hash: hash)

@@ -19,29 +19,34 @@ class ValidateViewController: UIViewController, UINavigationControllerDelegate, 
     
     var ref = Database.database().reference()
     var image = UIImage()
-    var validate = true
     
     let imagePicker = UIImagePickerController()
 
+    @IBOutlet weak var ChooseButton: UIButton!
+    @IBOutlet weak var ValidateButton: UIButton!
     @IBOutlet var imageView: UIImageView!
 
     @IBAction func loadImageButtonTapped(_ sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
-
     }
 
     @IBAction func Validate(_ sender: UIButton) {
         // Image to String
-        if(validate){
-            validate = false
+        let data = image.jpegData(compressionQuality: 1)
+        let imageStr = (data?.base64EncodedString())!
+        let MD5data = MD5(string: imageStr)
+        var hash = (MD5data.base64EncodedString())
+        hash = hash.replacingOccurrences(of: "/", with: "x")
+        var equal = readDB(hash: hash)
+        
+        // Image to String
+        if(equal){
             //Change view
             self.performSegue(withIdentifier: "correct", sender: self)
-            
         }
         else{
-            validate = true
             //Change view
             self.performSegue(withIdentifier: "false", sender: self)
             
@@ -70,17 +75,16 @@ class ValidateViewController: UIViewController, UINavigationControllerDelegate, 
         return digestData
     }
 
-    func readDB(hash: String){
+    func readDB(hash: String) -> Bool {
+        var equal = false
         self.ref.child(hash).observeSingleEvent(of: .value, with: {
             (snapshot) in
-            let data = snapshot.value as? String
-            print(data)
-            if (hash == data){
-                print("Eyo")
-            }else if (data == nil){
-                print(":(")
+            let hashDB = snapshot.value as? String
+            if (hash == hashDB){
+                equal = true
             }
         })
+        return equal
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -90,6 +94,8 @@ class ValidateViewController: UIViewController, UINavigationControllerDelegate, 
             self.image = pickedImage
         }
         dismiss(animated: true, completion: nil)
+        ValidateButton.setTitle("Validate", for: .normal)
+        ChooseButton.setTitle("", for: .normal)
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
